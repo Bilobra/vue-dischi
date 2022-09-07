@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+img{
+    max-width: 100%;
+}
+
 body{
     font-family: $--main-font-family;
 }
+
+// .container{
+//     max-width: 1024px;
+//     margin: 0 auto;
+// }
