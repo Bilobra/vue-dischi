@@ -1,15 +1,16 @@
 <template>
-    <header>
-
-        <div class="row">
-            <div class="col d-flex ps-5">
-
-                <img src="../assets/logo-small.svg" alt="logo spotify">
+    <header class="d-flex">
 
 
-            </div>
+        <figure class="d-flex align-items-center m-0 ps-2">
+            <img src="../assets/logo-small.svg" alt="logo spotify">
 
-        </div>
+        </figure>
+
+
+
+
+
     </header>
 </template>
 
@@ -24,20 +25,14 @@ export default {
 
 header {
     background-color: $--light-color;
+    height: 80px;
 
-    .row {
-        height: 80px;
-
-        .col {
-            align-items: center;
-
-            img {
-                max-width: 50px;
-                height: 50px;
-                
-            }
-        }
+    img {
+        max-width: 50px;
+        height: 50px;
 
     }
+
+
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-    <main class="py-5">
-        <div class="container">
-            <div class="row row-cols-lg-5 gy-5">
+    <main class="">
+        <div class="container py-5">
+            <div class="row row-cols-2 row-cols-lg-5 gy-5">
                 <div class="col py-4" v-for="(disk,i) in listDisk" :key="i">
                     <div class="card align-items-center gap-3 py-3 text-center" style="width: 16rem; height: 25rem;">
                         <img :src="disk.poster" class="card-img-top" :alt="disk.title">
@@ -45,7 +45,7 @@ export default {
 @import '../styles/general.scss';
 
 main {
-    height: 100vh;
+    // height: 100vh;
     background-color: $--dark-color;
 }
 
