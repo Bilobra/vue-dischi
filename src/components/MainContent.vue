@@ -1,8 +1,21 @@
 <template>
     <main class="">
         <div class="container py-5">
+            <div class="mb-4">
+                <label class="text-white pe-5" for="Genre">Scegli il Genere</label>
+
+                <select class="select-genre" name="Genre" id="" v-model="ChooseGenre">
+    
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="metal">Metal</option>
+    
+                </select>
+
+            </div>
             <div class="row row-cols-2 row-cols-lg-5 row-cols-sm-3 gy-1">
-                <div class="col py-4" v-for="(disk,i) in listDisk" :key="i">
+                <div class="col py-4" v-for="(disk,i) in filteredGenre" :key="i">
                     <div class="card align-items-center gap-3 py-3 text-center" style="width: 16rem; height: 25rem;">
                         <img :src="disk.poster" class="card-img-top" :alt="disk.title">
                         <div class="card-body">
@@ -25,6 +38,19 @@ export default {
     data() {
         return {
             listDisk: [],
+            ChooseGenre: '',
+        }
+    },
+    computed: {
+        filteredGenre() {
+            return this.listDisk.filter((el) => {
+                const genre = el.genre.toLowerCase()
+                const find = this.ChooseGenre.toLowerCase()
+                if (genre.includes(find)) {
+                    return true
+                }
+                return false
+            })
         }
     },
     created() {
@@ -35,7 +61,7 @@ export default {
                 this.listDisk = res.data.response;
             })
     },
-   
+
 
 
 }
@@ -48,6 +74,15 @@ export default {
 main {
     height: 100vh;
     background-color: $--dark-color;
+
+    .select-genre{
+        line-height: 20px;
+        padding: 5px 8px;
+        border:none;
+        border-radius:4px;
+        background-color: $--light-color;
+        color:white;
+    }
 }
 
 .card {

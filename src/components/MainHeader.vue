@@ -16,8 +16,17 @@
 </template>
 
 <script>
-export default {
 
+export default {
+    name:'MainHeader',
+    components:{
+        
+    },
+    data(){
+        return{
+            
+        }
+    },
     props: {
        
     },
@@ -27,6 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../styles/var.scss';
+
 
 header {
     background-color: $--light-color;
