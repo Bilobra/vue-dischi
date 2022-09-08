@@ -10,7 +10,11 @@
         <div class="">
             <label class="text-white pe-5" for="Genre">Scegli il Genere</label>
 
-            <select class="select-genre" name="Genre" id="" v-model="search" @click="$emit('search',search)">
+            <select class="select-genre" 
+                    name="Genre" id="" 
+                    v-model="search" 
+                    @change="$emit('call-search',search)">
+
                 <option class="first-option" value="">seleziona</option>
                 <option value="pop">Pop</option>
                 <option value="rock">Rock</option>

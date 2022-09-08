@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MainHeader @search="onChange"></MainHeader>
+    <MainHeader @call-search="onChange"></MainHeader>
     <MainContent :search="changeGenre"></MainContent>
   </div>
 </template>

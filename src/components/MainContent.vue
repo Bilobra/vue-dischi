@@ -33,14 +33,16 @@ export default {
     props: {
         search: {
             type: String,
-            default: '',
+            default: ''
         }
     },
     computed: {
         filteredGenre() {
             return this.listDisk.filter((el) => {
-                const genre = el.genre;
-                const find = this.search;
+                const genre = el.genre.toLowerCase();
+                const find = this.search.toLowerCase();
+
+                console.log(genre, find);
 
                 if(genre.includes(find)){
                     return true
