@@ -6,7 +6,21 @@
             <img src="../assets/logo-small.svg" alt="logo spotify">
 
         </figure>
-       
+
+        <div class="">
+            <label class="text-white pe-5" for="Genre">Scegli il Genere</label>
+
+            <select class="select-genre" name="Genre" id="" v-model="search" @click="$emit('search',search)">
+                <option class="first-option" value="">seleziona</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="jazz">Jazz</option>
+                <option value="metal">Metal</option>
+
+            </select>
+
+        </div>
+
 
 
 
@@ -18,19 +32,16 @@
 <script>
 
 export default {
-    name:'MainHeader',
-    components:{
-        
-    },
-    data(){
-        return{
-            
+    name: 'MainHeader',
+    
+
+    data() {
+        return {
+            search: '',
         }
     },
-    props: {
-       
-    },
-    
+
+
 }
 </script>
 
@@ -49,7 +60,7 @@ header {
 
     }
 
-    
+
 
 
 }

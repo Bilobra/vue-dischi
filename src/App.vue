@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <MainHeader ></MainHeader>
-    <MainContent ></MainContent>
+    <MainHeader @search="onChange"></MainHeader>
+    <MainContent :search="changeGenre"></MainContent>
   </div>
 </template>
 
@@ -11,19 +11,24 @@ import MainContent from './components/MainContent.vue';
 
 export default {
   name: 'App',
-  data(){
-    return{
-      
+  data() {
+    return {
+      changeGenre: '',
     }
   },
   components: {
     MainHeader,
     MainContent,
   },
- 
+  methods: {
+    onChange(data) {
+      this.changeGenre = data;
+    }
+  },
+
 }
 </script>
 
 <style lang="scss">
-  @import './styles/general.scss'
+@import './styles/general.scss';
 </style>
