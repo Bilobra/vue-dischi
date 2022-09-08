@@ -34,6 +34,20 @@ export default {
                 console.log(res.data)
                 this.listDisk = res.data.response;
             })
+    },
+    computed: {
+        filteredDisk() {
+            return this.listDisk.filter((el) => {
+                const genere = el.genre.toLowerCase()
+                const find = this.searchGenere.toLowerCase()
+
+                if (genere.includes(find)) {
+                    return true
+                }
+
+                return false
+            })
+        }
     }
 
 

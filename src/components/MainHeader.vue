@@ -7,7 +7,7 @@
 
         </figure>
         <div class="d-flex align-items-center">
-            <input type="text" placeholder="cerca...">
+            <input type="text" placeholder="cerca..." v-model="searchGenere">
         </div>
 
 
@@ -20,6 +20,13 @@
 <script>
 export default {
 
+    props: {
+        searchGenere: {
+            type: String,
+            default: '',
+        }
+    },
+    
 }
 </script>
 
@@ -37,13 +44,13 @@ header {
 
     }
 
-    input{
+    input {
         padding: 5px 8px;
         line-height: 20px;
         border: none;
         border-radius: 3px;
         background-color: $--dark-color;
-        color:white;
+        color: white;
     }
 
 
