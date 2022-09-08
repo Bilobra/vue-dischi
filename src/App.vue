@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <MainHeader></MainHeader>
-    <MainContent></MainContent>
+    <MainHeader ></MainHeader>
+    <MainContent ></MainContent>
   </div>
 </template>
 
@@ -11,10 +11,16 @@ import MainContent from './components/MainContent.vue';
 
 export default {
   name: 'App',
+  data(){
+    return{
+      
+    }
+  },
   components: {
     MainHeader,
     MainContent,
-  }
+  },
+ 
 }
 </script>
 

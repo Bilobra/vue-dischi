@@ -6,9 +6,7 @@
             <img src="../assets/logo-small.svg" alt="logo spotify">
 
         </figure>
-        <div class="d-flex align-items-center">
-            <input type="text" placeholder="cerca..." v-model="searchGenere">
-        </div>
+       
 
 
 
@@ -21,10 +19,7 @@
 export default {
 
     props: {
-        searchGenere: {
-            type: String,
-            default: '',
-        }
+       
     },
     
 }
@@ -44,14 +39,7 @@ header {
 
     }
 
-    input {
-        padding: 5px 8px;
-        line-height: 20px;
-        border: none;
-        border-radius: 3px;
-        background-color: $--dark-color;
-        color: white;
-    }
+    
 
 
 }
