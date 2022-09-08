@@ -5,7 +5,7 @@
                 <label class="text-white pe-5" for="Genre">Scegli il Genere</label>
 
                 <select class="select-genre" name="Genre" id="" v-model="ChooseGenre">
-    
+                    <option class="first-option" value="">seleziona</option>
                     <option value="pop">Pop</option>
                     <option value="rock">Rock</option>
                     <option value="jazz">Jazz</option>
@@ -82,6 +82,8 @@ main {
         border-radius:4px;
         background-color: $--light-color;
         color:white;
+
+        
     }
 }
 
